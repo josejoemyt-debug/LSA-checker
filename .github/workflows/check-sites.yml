@@ -38,7 +38,7 @@ jobs:
             test-results/
           retention-days: 14
 
-      - name: Email result
+      - name: Email result with screenshots
         if: always()
         env:
           MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
@@ -48,7 +48,7 @@ jobs:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           python3 - <<'EOF'
-          import os, smtplib
+          import glob, os, smtplib
           from email.message import EmailMessage
 
           status = os.environ["STATUS"]
@@ -60,8 +60,19 @@ jobs:
           msg["To"] = os.environ["MAIL_TO"]
           msg.set_content(
               f"The website and contact form check finished with status: {status}.\n\n"
-              f"Details and screenshots: {os.environ['RUN_URL']}"
+              f"Screenshots are attached. Full details: {os.environ['RUN_URL']}"
           )
+
+          # Attach every screenshot Playwright saved (cap total size for Gmail)
+          total = 0
+          for path in sorted(glob.glob("test-results/**/*.png", recursive=True)):
+              size = os.path.getsize(path)
+              if total + size > 20 * 1024 * 1024:
+                  break
+              total += size
+              name = os.path.relpath(path, "test-results").replace(os.sep, "_")
+              with open(path, "rb") as f:
+                  msg.add_attachment(f.read(), maintype="image", subtype="png", filename=name)
 
           with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
               server.login(os.environ["MAIL_USERNAME"], os.environ["MAIL_PASSWORD"])
