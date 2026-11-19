@@ -1,11 +1,4 @@
-import { test, expect } from '@playwright/test';
-
-/**
- * These tests open a real browser, visit each site's Contact page,
- * and verify that a contact form (or at least the main form fields) appears.
- *
- * Wix sites load forms with JavaScript, so we wait for the fields to show up.
- */
+import { test, expect, Page } from '@playwright/test';
 
 const sites = [
   {
@@ -22,64 +15,68 @@ const sites = [
   },
 ];
 
+const selectors = [
+  'form',
+  'input[type="email"]',
+  'input[name*="email" i]',
+  'input[placeholder*="email" i]',
+  'textarea',
+  'input[type="text"]',
+  'button[type="submit"]',
+];
+
+// Looks in the main page AND inside every iframe
+async function findForm(page: Page): Promise<string | null> {
+  for (const frame of page.frames()) {
+    for (const selector of selectors) {
+      const loc = frame.locator(selector);
+      const count = await loc.count().catch(() => 0);
+      for (let i = 0; i < Math.min(count, 3); i++) {
+        if (await loc.nth(i).isVisible().catch(() => false)) {
+          return `${selector} in ${frame.url() || 'main page'}`;
+        }
+      }
+    }
+  }
+  return null;
+}
+
 for (const site of sites) {
   test(`${site.name} – page loads and contact form is visible`, async ({ page }) => {
-    // 1. Go to the contact page
     const response = await page.goto(site.url, {
       waitUntil: 'domcontentloaded',
       timeout: 30000,
     });
 
-    // 2. Basic uptime check
     expect(response?.status(), `${site.name} should return a successful status`).toBeLessThan(400);
 
-    // 3. Wait a bit for Wix JavaScript to render the form
-    await page.waitForTimeout(3000);
+    // Let scripts and embedded forms finish loading
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
-    // 4. Look for common form elements (Wix forms vary, so we use flexible checks)
-    const formIndicators = [
-      page.locator('form'),
-      page.locator('input[type="email"]'),
-      page.locator('input[name*="email" i]'),
-      page.locator('input[placeholder*="email" i]'),
-      page.locator('textarea'),
-      page.locator('input[type="text"]'),
-      page.locator('[data-testid*="form" i]'),
-      page.locator('button[type="submit"]'),
-      page.getByRole('button', { name: /submit|send|contact/i }),
-    ];
-
-    // At least one of these should be visible
-    let found = false;
-    for (const locator of formIndicators) {
-      const count = await locator.count();
-      if (count > 0) {
-        // Check if at least one is visible
-        for (let i = 0; i < Math.min(count, 3); i++) {
-          if (await locator.nth(i).isVisible().catch(() => false)) {
-            found = true;
-            break;
-          }
-        }
-      }
-      if (found) break;
+    // Keep checking for up to ~16 seconds
+    let found: string | null = null;
+    for (let attempt = 0; attempt < 8 && !found; attempt++) {
+      found = await findForm(page);
+      if (!found) await page.waitForTimeout(2000);
     }
 
-    // Extra safety: also accept if the page contains strong "contact form" text
-    // after JavaScript has run
-    if (!found) {
-      const bodyText = await page.locator('body').innerText();
-      if (/contact\s*form|send\s*us\s*a\s*message|get\s*in\s*touch/i.test(bodyText)) {
-        found = true;
-      }
-    }
-
-    expect(found, `${site.name}: Contact form (or form fields) should be visible on the page`).toBeTruthy();
-
-    // 5. Optional: take a screenshot for the report (helpful when debugging)
+    // Always save a screenshot so you can see what the browser saw
     await page.screenshot({
       path: `test-results/${site.name.replace(/\s+/g, '-').toLowerCase()}-contact.png`,
       fullPage: true,
     });
+
+    if (!found) {
+      const title = await page.title();
+      const bodyText = (await page.locator('body').innerText().catch(() => '')).slice(0, 300).replace(/\s+/g, ' ');
+      throw new Error(
+        `${site.name}: no contact form found.\n` +
+        `Page title: "${title}"\n` +
+        `Frames on page: ${page.frames().length}\n` +
+        `Page text starts with: "${bodyText}"`
+      );
+    }
+
+    console.log(`${site.name}: form found via ${found}`);
   });
 }
