@@ -37,3 +37,33 @@ jobs:
             playwright-report/
             test-results/
           retention-days: 14
+
+- name: Email result
+        if: always()
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          STATUS: ${{ job.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python3 - <<'EOF'
+          import os, smtplib
+          from email.message import EmailMessage
+
+          status = os.environ["STATUS"]
+          icon = "✅" if status == "success" else "❌"
+
+          msg = EmailMessage()
+          msg["Subject"] = f"{icon} Site check: {status}"
+          msg["From"] = os.environ["MAIL_USERNAME"]
+          msg["To"] = os.environ["MAIL_TO"]
+          msg.set_content(
+              f"The website and contact form check finished with status: {status}.\n\n"
+              f"Details and screenshots: {os.environ['RUN_URL']}"
+          )
+
+          with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+              server.login(os.environ["MAIL_USERNAME"], os.environ["MAIL_PASSWORD"])
+              server.send_message(msg)
+          EOF
