@@ -37,7 +37,8 @@ jobs:
             playwright-report/
             test-results/
           retention-days: 14
-- name: Email result
+
+      - name: Email result
         if: always()
         env:
           MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
