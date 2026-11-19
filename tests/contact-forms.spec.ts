@@ -53,6 +53,15 @@ for (const site of sites) {
     // Let scripts and embedded forms finish loading
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
+    // Scroll down slowly so lazy-loaded sections (like forms) render
+await page.evaluate(async () => {
+  const height = document.documentElement.scrollHeight;
+  for (let y = 0; y < height; y += 400) {
+    window.scrollTo(0, y);
+    await new Promise((r) => setTimeout(r, 250));
+  }
+  window.scrollTo(0, 0);
+});
     // Keep checking for up to ~16 seconds
     let found: string | null = null;
     for (let attempt = 0; attempt < 8 && !found; attempt++) {
