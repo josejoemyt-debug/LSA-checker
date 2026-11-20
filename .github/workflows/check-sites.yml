@@ -5,6 +5,13 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: site-check
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -46,6 +53,7 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
           STATUS: ${{ job.status }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          DASH_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: |
           python3 - <<'EOF'
           import glob, os, smtplib
@@ -60,7 +68,9 @@ jobs:
           msg["To"] = os.environ["MAIL_TO"]
           msg.set_content(
               f"The website and contact form check finished with status: {status}.\n\n"
-              f"Screenshots are attached. Full details: {os.environ['RUN_URL']}"
+              f"Dashboard: {os.environ['DASH_URL']}\n"
+              f"Run details: {os.environ['RUN_URL']}\n\n"
+              f"Screenshots are attached."
           )
 
           # Attach every screenshot Playwright saved (cap total size for Gmail)
@@ -78,3 +88,31 @@ jobs:
               server.login(os.environ["MAIL_USERNAME"], os.environ["MAIL_PASSWORD"])
               server.send_message(msg)
           EOF
+
+      - name: Update dashboard
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git"
+          if git ls-remote --exit-code --heads "$REMOTE" gh-pages >/dev/null 2>&1; then
+            git clone --depth 1 --branch gh-pages "$REMOTE" dashboard
+          else
+            mkdir dashboard
+            git -C dashboard init -b gh-pages
+            git -C dashboard remote add origin "$REMOTE"
+          fi
+
+          node scripts/build-dashboard.js
+
+          cd dashboard
+          touch .nojekyll
+          git config user.name "site-monitor-bot"
+          git config user.email "site-monitor-bot@users.noreply.github.com"
+          git checkout --orphan fresh
+          git add -A
+          git commit -m "Update dashboard"
+          git push --force origin fresh:gh-pages
