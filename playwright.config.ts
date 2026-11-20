@@ -8,7 +8,8 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [
     ['list'],
-    ['html', { open: 'never' }]
+    ['html', { open: 'never' }],
+    ['json', { outputFile: 'results.json' }]
   ],
   use: {
     trace: 'off',
