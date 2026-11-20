@@ -61,7 +61,7 @@ for (const site of sites) {
     expect(response?.status(), `${site.name} should return a successful status`).toBeLessThan(400);
 
     // Let scripts and embedded forms finish loading
-    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+    await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
 
     // Scroll down slowly so lazy-loaded sections (like forms) render
     await page.evaluate(async () => {
@@ -96,10 +96,8 @@ for (const site of sites) {
 
     // Form found: give it extra time to finish rendering, then bring it into view
     await page.waitForTimeout(EXTRA_WAIT_MS);
-    await found.locator.scrollIntoViewIfNeeded().catch(() => {});
-    await page.waitForTimeout(1000);
 
-    await page.screenshot({ path: screenshotPath, fullPage: true });
+    await page.screenshot({ path: screenshotPath, fullPage: true, timeout: 20000 });
 
     console.log(`${site.name}: form found via ${found.description}`);
   });
