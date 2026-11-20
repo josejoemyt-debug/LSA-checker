@@ -4,14 +4,14 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 1 : 0,
+  retries: 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [
     ['list'],
     ['html', { open: 'never' }]
   ],
   use: {
-    trace: 'on-first-retry',
+    trace: 'off',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
   },
@@ -21,5 +21,5 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
   ],
-  timeout: 100000,
+  timeout: 90000,
 });
