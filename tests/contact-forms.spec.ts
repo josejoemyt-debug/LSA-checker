@@ -25,9 +25,9 @@ const selectors = [
   'button[type="submit"]',
 ];
 
-// Extra time to let the form finish rendering before the screenshot.
+// Extra time to let the form finish rendering before the screenshots.
 // Increase this number (in milliseconds) if the form is still cut off.
-const EXTRA_WAIT_MS = 10000;
+const EXTRA_WAIT_MS = 8000;
 
 // Looks in the main page AND inside every iframe
 async function findForm(
@@ -53,6 +53,9 @@ async function findForm(
 
 for (const site of sites) {
   test(`${site.name} – page loads and contact form is visible`, async ({ page }) => {
+    // Taller window so the form fits on screen in the screenshot
+    await page.setViewportSize({ width: 1280, height: 1600 });
+
     const response = await page.goto(site.url, {
       waitUntil: 'domcontentloaded',
       timeout: 30000,
@@ -65,7 +68,7 @@ for (const site of sites) {
 
     // Scroll down slowly so lazy-loaded sections (like forms) render
     await page.evaluate(async () => {
-      const height = document.documentElement.scrollHeight;
+      const height = Math.min(document.documentElement.scrollHeight, 12000);
       for (let y = 0; y < height; y += 400) {
         window.scrollTo(0, y);
         await new Promise((r) => setTimeout(r, 250));
@@ -83,7 +86,7 @@ for (const site of sites) {
     const screenshotPath = `test-results/${site.name.replace(/\s+/g, '-').toLowerCase()}-contact.png`;
 
     if (!found) {
-      await page.screenshot({ path: screenshotPath, fullPage: true });
+      await page.screenshot({ path: screenshotPath, fullPage: true, timeout: 20000 });
       const title = await page.title();
       const bodyText = (await page.locator('body').innerText().catch(() => '')).slice(0, 300).replace(/\s+/g, ' ');
       throw new Error(
@@ -94,9 +97,22 @@ for (const site of sites) {
       );
     }
 
-    // Form found: give it extra time to finish rendering, then bring it into view
+    // Form found: give it extra time to finish rendering
     await page.waitForTimeout(EXTRA_WAIT_MS);
 
+    // Scroll the form to the middle of the screen (with a time limit so it can't hang)
+    await found.locator
+      .evaluate((el) => el.scrollIntoView({ block: 'center' }), undefined, { timeout: 5000 })
+      .catch(() => {});
+    await page.waitForTimeout(3000);
+
+    // Screenshot of exactly what's on screen, centered on the form
+    await page.screenshot({
+      path: screenshotPath.replace('-contact.png', '-form-view.png'),
+      timeout: 20000,
+    });
+
+    // Full-page screenshot
     await page.screenshot({ path: screenshotPath, fullPage: true, timeout: 20000 });
 
     console.log(`${site.name}: form found via ${found.description}`);
