@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Monitor</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1c2330; --muted: #667085;
+    --line: #e4e7ec; --ok: #16a34a; --bad: #dc2626; --warn: #d97706;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f141b; --card: #171e28; --text: #e6e9ef; --muted: #98a2b3; --line: #273142; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 32px 0 12px; }
+  .sub { color: var(--muted); margin-bottom: 20px; }
+  .banner { padding: 14px 18px; border-radius: 12px; color: #fff; font-weight: 600; margin-bottom: 20px; }
+  .banner.passed { background: var(--ok); } .banner.failed { background: var(--bad); } .banner.error { background: var(--warn); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .card .head { padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .card .name { font-weight: 600; }
+  .badge { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 99px; color: #fff; }
+  .badge.passed { background: var(--ok); } .badge.failed { background: var(--bad); } .badge.error { background: var(--warn); }
+  .card img { width: 100%; display: block; border-top: 1px solid var(--line); cursor: zoom-in; background: #fff; }
+  .card .meta { padding: 8px 14px 12px; color: var(--muted); font-size: 13px; }
+  .card .err { padding: 0 14px 12px; color: var(--bad); font-size: 13px; white-space: pre-wrap; word-break: break-word; }
+  .links a { margin-right: 12px; font-size: 13px; }
+  a { color: #2563eb; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line);
+          border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  tr:last-child td { border-bottom: 0; }
+  tr.run { cursor: pointer; } tr.run:hover { background: color-mix(in srgb, var(--line) 40%, transparent); }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
+  .dot.ok { background: var(--ok); } .dot.bad { background: var(--bad); }
+  tr.detail td { background: color-mix(in srgb, var(--line) 25%, transparent); }
+  .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: none; overflow: auto; padding: 20px; z-index: 10; cursor: zoom-out; }
+  .lightbox img { max-width: 100%; display: block; margin: 0 auto; background: #fff; }
+  .lightbox.on { display: block; }
+  .empty { color: var(--muted); padding: 40px 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Site Monitor</h1>
+  <div class="sub" id="sub">Loading…</div>
+  <div id="banner"></div>
+  <div class="grid" id="latest"></div>
+  <h2>History</h2>
+  <div id="history"></div>
+</div>
+<div class="lightbox" id="lb"><img id="lbimg" alt=""></div>
+
+<script>
+const fmt = (iso) => new Date(iso).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' });
+const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const label = { passed: 'All passing', failed: 'Problem detected', error: 'Run error' };
+const lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg');
+lb.onclick = () => lb.classList.remove('on');
+function zoom(src) { lbimg.src = src; lb.classList.add('on'); }
+
+function siteCard(s) {
+  const st = s.ok ? 'passed' : 'failed';
+  return `<div class="card">
+    <div class="head"><span class="name">${esc(s.name)}</span><span class="badge ${st}">${s.ok ? 'PASS' : 'FAIL'}</span></div>
+    ${s.formView ? `<img src="${s.formView}" alt="${esc(s.name)} form" onclick="zoom('${s.formView}')">` : ''}
+    <div class="meta">${(s.durationMs / 1000).toFixed(1)}s
+      <span class="links">${s.fullPage ? ` · <a href="${s.fullPage}" target="_blank">Full-page screenshot</a>` : ''}</span></div>
+    ${s.error ? `<div class="err">${esc(s.error)}</div>` : ''}
+  </div>`;
+}
+
+fetch('history.json?t=' + Date.now()).then((r) => r.json()).then((history) => {
+  if (!history.length) { document.getElementById('sub').textContent = ''; document.getElementById('latest').innerHTML = '<div class="empty">No runs yet.</div>'; return; }
+  const last = history[0];
+  document.getElementById('sub').textContent = 'Last checked ' + fmt(last.time) + ' · checks run every 6 hours';
+  document.getElementById('banner').innerHTML = `<div class="banner ${last.status}">${label[last.status]}${last.url ? ` — <a style="color:#fff" href="${last.url}" target="_blank">view run</a>` : ''}</div>`;
+  document.getElementById('latest').innerHTML = last.sites.length ? last.sites.map(siteCard).join('') : '<div class="empty">This run produced no results. Check the run logs.</div>';
+
+  const rows = history.map((r, i) => `
+    <tr class="run" onclick="document.getElementById('d${i}').hidden = !document.getElementById('d${i}').hidden">
+      <td>${fmt(r.time)}</td>
+      <td><span class="badge ${r.status}">${r.status.toUpperCase()}</span></td>
+      <td>${r.sites.map((s) => `<span class="dot ${s.ok ? 'ok' : 'bad'}" title="${esc(s.name)}"></span>`).join('')}</td>
+      <td>${r.url ? `<a href="${r.url}" target="_blank" onclick="event.stopPropagation()">logs</a>` : ''}</td>
+    </tr>
+    <tr class="detail" id="d${i}" hidden><td colspan="4"><div class="grid">${r.sites.map(siteCard).join('')}</div></td></tr>`).join('');
+  document.getElementById('history').innerHTML = `<table><thead><tr><th>When</th><th>Result</th><th>Sites</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+}).catch(() => { document.getElementById('sub').textContent = 'Could not load history.json'; });
+</script>
+</body>
+</html>

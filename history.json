@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "2026-11-28T12-57-14-368Z",
+    "time": "2026-11-28T12:57:14.368Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/46147021376",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23399,
+        "error": "",
+        "formView": "runs/2026-11-28T12-57-14-368Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-28T12-57-14-368Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23648,
+        "error": "",
+        "formView": "runs/2026-11-28T12-57-14-368Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-28T12-57-14-368Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23427,
+        "error": "",
+        "formView": "runs/2026-11-28T12-57-14-368Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-28T12-57-14-368Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-28T07-07-35-721Z",
+    "time": "2026-11-28T07:07:35.721Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/46119599559",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23496,
+        "error": "",
+        "formView": "runs/2026-11-28T07-07-35-721Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-28T07-07-35-721Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23715,
+        "error": "",
+        "formView": "runs/2026-11-28T07-07-35-721Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-28T07-07-35-721Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23605,
+        "error": "",
+        "formView": "runs/2026-11-28T07-07-35-721Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-28T07-07-35-721Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-28T01-07-41-452Z",
+    "time": "2026-11-28T01:07:41.452Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/46091368625",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23576,
+        "error": "",
+        "formView": "runs/2026-11-28T01-07-41-452Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-28T01-07-41-452Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23704,
+        "error": "",
+        "formView": "runs/2026-11-28T01-07-41-452Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-28T01-07-41-452Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23620,
+        "error": "",
+        "formView": "runs/2026-11-28T01-07-41-452Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-28T01-07-41-452Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-27T18-56-18-377Z",
+    "time": "2026-11-27T18:56:18.377Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/46052889529",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23434,
+        "error": "",
+        "formView": "runs/2026-11-27T18-56-18-377Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-27T18-56-18-377Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23644,
+        "error": "",
+        "formView": "runs/2026-11-27T18-56-18-377Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-27T18-56-18-377Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23837,
+        "error": "",
+        "formView": "runs/2026-11-27T18-56-18-377Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-27T18-56-18-377Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-27T13-12-11-205Z",
+    "time": "2026-11-27T13:12:11.205Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/46004737864",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23418,
+        "error": "",
+        "formView": "runs/2026-11-27T13-12-11-205Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-27T13-12-11-205Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23636,
+        "error": "",
+        "formView": "runs/2026-11-27T13-12-11-205Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-27T13-12-11-205Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 24210,
+        "error": "",
+        "formView": "runs/2026-11-27T13-12-11-205Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-27T13-12-11-205Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-27T07-14-11-360Z",
+    "time": "2026-11-27T07:14:11.360Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45956873752",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23554,
+        "error": "",
+        "formView": "runs/2026-11-27T07-14-11-360Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-27T07-14-11-360Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23801,
+        "error": "",
+        "formView": "runs/2026-11-27T07-14-11-360Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-27T07-14-11-360Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23570,
+        "error": "",
+        "formView": "runs/2026-11-27T07-14-11-360Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-27T07-14-11-360Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-27T01-13-36-413Z",
+    "time": "2026-11-27T01:13:36.413Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45921172285",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 15787,
+        "error": "",
+        "formView": "runs/2026-11-27T01-13-36-413Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-27T01-13-36-413Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23823,
+        "error": "",
+        "formView": "runs/2026-11-27T01-13-36-413Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-27T01-13-36-413Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23596,
+        "error": "",
+        "formView": "runs/2026-11-27T01-13-36-413Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-27T01-13-36-413Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-26T18-57-30-284Z",
+    "time": "2026-11-26T18:57:30.284Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45879783332",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 15492,
+        "error": "",
+        "formView": "runs/2026-11-26T18-57-30-284Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-26T18-57-30-284Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 15606,
+        "error": "",
+        "formView": "runs/2026-11-26T18-57-30-284Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-26T18-57-30-284Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23587,
+        "error": "",
+        "formView": "runs/2026-11-26T18-57-30-284Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-26T18-57-30-284Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-26T13-15-40-930Z",
+    "time": "2026-11-26T13:15:40.930Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45827126632",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23489,
+        "error": "",
+        "formView": "runs/2026-11-26T13-15-40-930Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-26T13-15-40-930Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23676,
+        "error": "",
+        "formView": "runs/2026-11-26T13-15-40-930Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-26T13-15-40-930Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 24671,
+        "error": "",
+        "formView": "runs/2026-11-26T13-15-40-930Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-26T13-15-40-930Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-26T07-13-50-762Z",
+    "time": "2026-11-26T07:13:50.762Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45773553906",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23823,
+        "error": "",
+        "formView": "runs/2026-11-26T07-13-50-762Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-26T07-13-50-762Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 24142,
+        "error": "",
+        "formView": "runs/2026-11-26T07-13-50-762Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-26T07-13-50-762Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23792,
+        "error": "",
+        "formView": "runs/2026-11-26T07-13-50-762Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-26T07-13-50-762Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-26T01-07-31-427Z",
+    "time": "2026-11-26T01:07:31.427Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45733394055",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 16073,
+        "error": "",
+        "formView": "runs/2026-11-26T01-07-31-427Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-26T01-07-31-427Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23670,
+        "error": "",
+        "formView": "runs/2026-11-26T01-07-31-427Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-26T01-07-31-427Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23576,
+        "error": "",
+        "formView": "runs/2026-11-26T01-07-31-427Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-26T01-07-31-427Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-25T18-51-48-074Z",
+    "time": "2026-11-25T18:51:48.074Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45679143718",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23587,
+        "error": "",
+        "formView": "runs/2026-11-25T18-51-48-074Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-25T18-51-48-074Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23726,
+        "error": "",
+        "formView": "runs/2026-11-25T18-51-48-074Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-25T18-51-48-074Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23647,
+        "error": "",
+        "formView": "runs/2026-11-25T18-51-48-074Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-25T18-51-48-074Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-25T13-16-27-860Z",
+    "time": "2026-11-25T13:16:27.860Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45621633125",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 16469,
+        "error": "",
+        "formView": "runs/2026-11-25T13-16-27-860Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-25T13-16-27-860Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 16327,
+        "error": "",
+        "formView": "runs/2026-11-25T13-16-27-860Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-25T13-16-27-860Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 24384,
+        "error": "",
+        "formView": "runs/2026-11-25T13-16-27-860Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-25T13-16-27-860Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-25T07-14-28-788Z",
+    "time": "2026-11-25T07:14:28.788Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45566365751",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 17093,
+        "error": "",
+        "formView": "runs/2026-11-25T07-14-28-788Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-25T07-14-28-788Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23800,
+        "error": "",
+        "formView": "runs/2026-11-25T07-14-28-788Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-25T07-14-28-788Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23641,
+        "error": "",
+        "formView": "runs/2026-11-25T07-14-28-788Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-25T07-14-28-788Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-25T01-07-54-448Z",
+    "time": "2026-11-25T01:07:54.448Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45523189017",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23593,
+        "error": "",
+        "formView": "runs/2026-11-25T01-07-54-448Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-25T01-07-54-448Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23714,
+        "error": "",
+        "formView": "runs/2026-11-25T01-07-54-448Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-25T01-07-54-448Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23676,
+        "error": "",
+        "formView": "runs/2026-11-25T01-07-54-448Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-25T01-07-54-448Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-24T18-57-42-777Z",
+    "time": "2026-11-24T18:57:42.777Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45464838786",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 16519,
+        "error": "",
+        "formView": "runs/2026-11-24T18-57-42-777Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-24T18-57-42-777Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 16181,
+        "error": "",
+        "formView": "runs/2026-11-24T18-57-42-777Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-24T18-57-42-777Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23566,
+        "error": "",
+        "formView": "runs/2026-11-24T18-57-42-777Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-24T18-57-42-777Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-24T13-12-38-765Z",
+    "time": "2026-11-24T13:12:38.765Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45400791596",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 15904,
+        "error": "",
+        "formView": "runs/2026-11-24T13-12-38-765Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-24T13-12-38-765Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23779,
+        "error": "",
+        "formView": "runs/2026-11-24T13-12-38-765Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-24T13-12-38-765Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 24460,
+        "error": "",
+        "formView": "runs/2026-11-24T13-12-38-765Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-24T13-12-38-765Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-24T07-11-20-355Z",
+    "time": "2026-11-24T07:11:20.355Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45345834487",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23631,
+        "error": "",
+        "formView": "runs/2026-11-24T07-11-20-355Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-24T07-11-20-355Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23833,
+        "error": "",
+        "formView": "runs/2026-11-24T07-11-20-355Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-24T07-11-20-355Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23613,
+        "error": "",
+        "formView": "runs/2026-11-24T07-11-20-355Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-24T07-11-20-355Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-24T01-01-47-480Z",
+    "time": "2026-11-24T01:01:47.480Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45301646333",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23552,
+        "error": "",
+        "formView": "runs/2026-11-24T01-01-47-480Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-24T01-01-47-480Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 15687,
+        "error": "",
+        "formView": "runs/2026-11-24T01-01-47-480Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-24T01-01-47-480Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23550,
+        "error": "",
+        "formView": "runs/2026-11-24T01-01-47-480Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-24T01-01-47-480Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-23T18-58-08-405Z",
+    "time": "2026-11-23T18:58:08.405Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45243647385",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23569,
+        "error": "",
+        "formView": "runs/2026-11-23T18-58-08-405Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-23T18-58-08-405Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23737,
+        "error": "",
+        "formView": "runs/2026-11-23T18-58-08-405Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-23T18-58-08-405Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23623,
+        "error": "",
+        "formView": "runs/2026-11-23T18-58-08-405Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-23T18-58-08-405Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-23T13-13-36-025Z",
+    "time": "2026-11-23T13:13:36.025Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45181528875",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 16810,
+        "error": "",
+        "formView": "runs/2026-11-23T13-13-36-025Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-23T13-13-36-025Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23823,
+        "error": "",
+        "formView": "runs/2026-11-23T13-13-36-025Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-23T13-13-36-025Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23627,
+        "error": "",
+        "formView": "runs/2026-11-23T13-13-36-025Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-23T13-13-36-025Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-23T07-30-22-119Z",
+    "time": "2026-11-23T07:30:22.119Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45131355094",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 24457,
+        "error": "",
+        "formView": "runs/2026-11-23T07-30-22-119Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-23T07-30-22-119Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23796,
+        "error": "",
+        "formView": "runs/2026-11-23T07-30-22-119Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-23T07-30-22-119Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23817,
+        "error": "",
+        "formView": "runs/2026-11-23T07-30-22-119Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-23T07-30-22-119Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-23T01-02-29-252Z",
+    "time": "2026-11-23T01:02:29.252Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45092045866",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23418,
+        "error": "",
+        "formView": "runs/2026-11-23T01-02-29-252Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-23T01-02-29-252Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23626,
+        "error": "",
+        "formView": "runs/2026-11-23T01-02-29-252Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-23T01-02-29-252Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23487,
+        "error": "",
+        "formView": "runs/2026-11-23T01-02-29-252Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-23T01-02-29-252Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-22T18-45-24-348Z",
+    "time": "2026-11-22T18:45:24.348Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45056687509",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23411,
+        "error": "",
+        "formView": "runs/2026-11-22T18-45-24-348Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-22T18-45-24-348Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23608,
+        "error": "",
+        "formView": "runs/2026-11-22T18-45-24-348Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-22T18-45-24-348Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23453,
+        "error": "",
+        "formView": "runs/2026-11-22T18-45-24-348Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-22T18-45-24-348Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-22T12-50-38-929Z",
+    "time": "2026-11-22T12:50:38.929Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/45024225873",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23468,
+        "error": "",
+        "formView": "runs/2026-11-22T12-50-38-929Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-22T12-50-38-929Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23821,
+        "error": "",
+        "formView": "runs/2026-11-22T12-50-38-929Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-22T12-50-38-929Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 24272,
+        "error": "",
+        "formView": "runs/2026-11-22T12-50-38-929Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-22T12-50-38-929Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-22T07-03-52-115Z",
+    "time": "2026-11-22T07:03:52.115Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/44996379935",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23589,
+        "error": "",
+        "formView": "runs/2026-11-22T07-03-52-115Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-22T07-03-52-115Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23733,
+        "error": "",
+        "formView": "runs/2026-11-22T07-03-52-115Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-22T07-03-52-115Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23583,
+        "error": "",
+        "formView": "runs/2026-11-22T07-03-52-115Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-22T07-03-52-115Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-22T00-59-15-462Z",
+    "time": "2026-11-22T00:59:15.462Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/44969142149",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23516,
+        "error": "",
+        "formView": "runs/2026-11-22T00-59-15-462Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-22T00-59-15-462Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23637,
+        "error": "",
+        "formView": "runs/2026-11-22T00-59-15-462Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-22T00-59-15-462Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23724,
+        "error": "",
+        "formView": "runs/2026-11-22T00-59-15-462Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-22T00-59-15-462Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-21T18-43-31-590Z",
+    "time": "2026-11-21T18:43:31.590Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/44936927924",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23396,
+        "error": "",
+        "formView": "runs/2026-11-21T18-43-31-590Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-21T18-43-31-590Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23718,
+        "error": "",
+        "formView": "runs/2026-11-21T18-43-31-590Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-21T18-43-31-590Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23481,
+        "error": "",
+        "formView": "runs/2026-11-21T18-43-31-590Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-21T18-43-31-590Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-21T12-52-19-865Z",
+    "time": "2026-11-21T12:52:19.865Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/44905897768",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23372,
+        "error": "",
+        "formView": "runs/2026-11-21T12-52-19-865Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-21T12-52-19-865Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23570,
+        "error": "",
+        "formView": "runs/2026-11-21T12-52-19-865Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-21T12-52-19-865Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 24394,
+        "error": "",
+        "formView": "runs/2026-11-21T12-52-19-865Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-21T12-52-19-865Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-21T07-03-17-816Z",
+    "time": "2026-11-21T07:03:17.816Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/44878282818",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23448,
+        "error": "",
+        "formView": "runs/2026-11-21T07-03-17-816Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-21T07-03-17-816Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23738,
+        "error": "",
+        "formView": "runs/2026-11-21T07-03-17-816Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-21T07-03-17-816Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23460,
+        "error": "",
+        "formView": "runs/2026-11-21T07-03-17-816Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-21T07-03-17-816Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-21T01-01-40-919Z",
+    "time": "2026-11-21T01:01:40.919Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/44847442466",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23395,
+        "error": "",
+        "formView": "runs/2026-11-21T01-01-40-919Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-21T01-01-40-919Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23613,
+        "error": "",
+        "formView": "runs/2026-11-21T01-01-40-919Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-21T01-01-40-919Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23485,
+        "error": "",
+        "formView": "runs/2026-11-21T01-01-40-919Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-21T01-01-40-919Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-20T19-05-01-032Z",
+    "time": "2026-11-20T19:05:01.032Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/44797378684",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 23471,
+        "error": "",
+        "formView": "runs/2026-11-20T19-05-01-032Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-20T19-05-01-032Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23663,
+        "error": "",
+        "formView": "runs/2026-11-20T19-05-01-032Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-20T19-05-01-032Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23559,
+        "error": "",
+        "formView": "runs/2026-11-20T19-05-01-032Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-20T19-05-01-032Z/novare-academy-contact.png"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-20T13-41-24-757Z",
+    "time": "2026-11-20T13:41:24.757Z",
+    "status": "passed",
+    "url": "https://github.com/josejoemyt-debug/LSA-checker/actions/runs/44746273248",
+    "sites": [
+      {
+        "name": "Little Scholars LKN",
+        "ok": true,
+        "durationMs": 15895,
+        "error": "",
+        "formView": "runs/2026-11-20T13-41-24-757Z/little-scholars-lkn-form-view.png",
+        "fullPage": "runs/2026-11-20T13-41-24-757Z/little-scholars-lkn-contact.png"
+      },
+      {
+        "name": "LSA Kannapolis",
+        "ok": true,
+        "durationMs": 23653,
+        "error": "",
+        "formView": "runs/2026-11-20T13-41-24-757Z/lsa-kannapolis-form-view.png",
+        "fullPage": "runs/2026-11-20T13-41-24-757Z/lsa-kannapolis-contact.png"
+      },
+      {
+        "name": "Novare Academy",
+        "ok": true,
+        "durationMs": 23657,
+        "error": "",
+        "formView": "runs/2026-11-20T13-41-24-757Z/novare-academy-form-view.png",
+        "fullPage": "runs/2026-11-20T13-41-24-757Z/novare-academy-contact.png"
+      }
+    ]
+  }
+]
